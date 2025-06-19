@@ -1,42 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional custom styles below */
+
+body {
+  @apply bg-gradient-to-br from-purple-50 via-white to-pink-50 text-gray-800 font-sans;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  @apply max-w-7xl mx-auto px-6 py-8;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
+/* Logo spin effect (optional) */
+@keyframes spin-slow {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
 
+.logo {
+  @apply h-24 p-6 transition duration-300 ease-in-out;
+  will-change: filter;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.67));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.67));
+}
+
+/* Only animate if user allows motion */
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .logo.spin {
+    animation: spin-slow infinite 20s linear;
   }
 }
 
+/* Card styling */
 .card {
-  padding: 2em;
+  @apply p-8 rounded-xl shadow-md bg-white text-left;
 }
 
+/* Doc link text */
 .read-the-docs {
-  color: #888;
+  @apply text-gray-500;
 }
