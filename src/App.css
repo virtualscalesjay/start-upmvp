@@ -2,40 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles for a professional and centered layout */
-
+/* Main background gradient for the whole app */
 body {
-  @apply bg-gradient-to-br from-purple-50 via-white to-pink-50 min-h-screen text-gray-800 font-sans antialiased;
+  @apply min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 text-gray-800 font-sans antialiased;
 }
 
 #root {
   @apply min-h-screen flex flex-col;
 }
 
-/* Hero section styles */
-.hero-section {
-  @apply flex-1 flex items-center justify-center py-20 sm:py-32;
+/* Center all main content */
+.main-container {
+  @apply flex-1 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8;
 }
 
-.hero-content {
-  @apply text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+/* Hero section styles */
+.hero-section {
+  @apply flex flex-col items-center justify-center py-20 sm:py-32 w-full;
 }
 
 .hero-title {
-  @apply text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight;
+  @apply text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-center;
 }
 
 .hero-description {
-  @apply text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed;
+  @apply text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed text-center;
 }
 
 .hero-buttons {
   @apply flex flex-col sm:flex-row gap-4 justify-center items-center;
-}
-
-/* Section padding */
-.section-padding {
-  @apply py-16 sm:py-24;
 }
 
 /* Card styles */
@@ -78,7 +73,6 @@ body {
   .hero-title {
     @apply text-3xl;
   }
-  
   .hero-description {
     @apply text-lg sm:text-xl;
   }

@@ -505,16 +505,14 @@ const Footer = () => {
 // Main App Component
 const App = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 text-gray-800">
-  <div className="max-w-7xl mx-auto px-4">
-    <Navbar />
-    <Hero />
-    <Features />
-    <Testimonials />
-    <CTA />
-    <Footer />
-  </div>
-</div>
+    <div className="main-container">
+      <Navbar />
+      <Hero />
+      <Features />
+      <Testimonials />
+      <CTA />
+      <Footer />
+    </div>
   );
 };
 
